@@ -29,21 +29,52 @@
     </div>
 </div>
 
-<div id="nav">
-    <ul id="ul1">
-        <li>一周新闻</li>
-        <li>教研室概况</li>
-        <li>师资队伍</li>
-        <li>当前成员</li>
-        <li>科研平台</li>
-        <li>就业情况</li>
-        <li>对外合作</li>
+<div id="wrap">
+    <div id="nav">
+        <ul class="nav">
+            <li><a href="#">一周新闻</a></li>
+            <li><a href="#">教研室概况</a>
+                <ul class="ul1">
+                    <li><a href="#">111</a></li>
+                    <li><a href="#">222</a></li>
+                    <li><a href="#">333</a></li>
+                </ul>
+                <script>
+                    var oUl = document.getElementsByClassName('ul1')[0];
+                    var oLi = oUl.parentNode
+//                    alert(oA.innerHTML)
+                    
+                    oLi.onmouseover = function () {
+                        oUl.style.display = 'block'
+                    }
+                    oLi.onmouseout = function () {
+                        oUl.style.display = 'none'
+                    }
 
-    </ul>
+                </script>
+            </li>
+            <li><a href="#">师资队伍</a></li>
+            <li><a href="#">研究生培养</a></li>
+            <li class="no_b"><a href="#">就业情况</a>
+                <ul class="ul2">
+                    <li><a href="#">2015届毕业生</a></li>
+                    <li><a href="#">2014届毕业生</a></li>
+                    <li><a href="#">2013届毕业生</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <div id="show"></div>
+
+    <div id="news"></div>
+
+    <div id="footer"></div>
+
+
+
 </div>
-<div id="content"></div>
-<div id="footer"></div>
-
 
 </body>
 </html>
