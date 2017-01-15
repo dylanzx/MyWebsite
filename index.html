@@ -14,7 +14,7 @@
         <li class="no_b"><a href="#" >访客</a></li>
         <li class="right "><a href="#" >English</a></li>
         <li class="right no_b"><a href="#" >中文</a></li>
-        <div class="clear"></div>
+        <li class="clear"></li>
     </ul>
 
 </div>
@@ -49,6 +49,7 @@
 
                     oLi.onmouseover = function () {
                         oUl.style.display = 'block'
+                        oUl.style.zIndex = 5
                     }
                     oLi.onmouseout = function () {
                         oUl.style.display = 'none'
@@ -82,7 +83,50 @@
 
     </div>
 
-    <div id="show"></div>
+    <div id="show">
+        <ul >
+            <li><a href="#"><img src="pics/show1.png" alt=""></a></li>
+            <li><a href="#"><img src="pics/show2.png" alt=""></a></li>
+            <div class="clear"></div>
+        </ul>
+        <div class="control">
+            <span></span><span></span>
+            <div class="clear"></div>
+        </div>
+        <script>
+
+            var oShow = document.getElementById('show');
+            var oUl3 = oShow.getElementsByTagName('ul')[0]
+            var aSpan = oShow.getElementsByTagName('span');
+
+            var posL = 0;
+            var timer = null
+
+            window.onload = function () {
+
+                timer = setInterval(function () {
+                    if( posL == 0 ){
+                        oUl3.style.left = -960+'px'
+                        posL = -960;
+                    }else {
+                        oUl3.style.left = '0'
+                        posL = 0;
+                    }
+
+                },3000)
+
+                aSpan[0].onclick = function () {
+                    oUl3.style.left = 0
+                }
+                aSpan[1].onclick = function () {
+                    oUl3.style.left = -960+'px'
+                }
+
+            }
+
+
+        </script>
+    </div>
 
     <div id="news"></div>
 

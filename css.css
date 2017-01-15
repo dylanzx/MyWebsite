@@ -92,7 +92,7 @@ a{
     height: 30px;
     position: absolute;
     right: 0;
-    top: 20px;
+    top: 45%;
 }
 #logo input{
     position: absolute;
@@ -113,7 +113,7 @@ a{
 }
 
 #wrap{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     width: 980px;
     height: 500px;
     margin: 0 auto;
@@ -123,7 +123,7 @@ a{
 }
 #nav{
     width: 960px;
-    margin: 10px auto;
+    margin: 8px auto;
     padding-top: 2px;
     height: 30px;
     border: 1px solid greenyellow;
@@ -140,15 +140,19 @@ a{
     margin: 0 10px;
     height: 24px;
     line-height: 24px;
+    z-index: 1;
+    position: relative;
 
 }
 #nav .ul1 li,#nav .ul2 li{
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #333;
     padding:2px 0;
 
 }
 #nav .ul1,#nav .ul2{
+    background-color: #ccc;
     display: none;
+    position: relative;
     z-index: 2;
 }
 #nav .no_b{
@@ -158,6 +162,46 @@ a{
     font-size: 16px;
     color: #333
 }
+#show{
+    width: 960px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+
+}
+#show ul{
+    width: 200%;
+    height: 100%;
+
+}
+#show li{
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+#show img{
+    width: 100%;
+    height: 100%;
+
+}
+
+#show .control{
+    width: 60px;
+    height: 15px;
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+}
+#show span{
+    display: block;
+    float: left;
+    width: 20px;
+    height: 100%;
+    margin-right: 6px;
+    background-color: gray;
+    cursor: pointer;
+}
+
 
 
 
