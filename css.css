@@ -167,11 +167,14 @@ a{
     height: 300px;
     overflow: hidden;
     position: relative;
+    margin: 0 auto;
 
 }
 #show ul{
     width: 200%;
     height: 100%;
+    position: absolute;
+    /*margin-left: 10px;;*/
 
 }
 #show li{

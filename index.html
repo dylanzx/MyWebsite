@@ -76,7 +76,6 @@
                 oLi2.onmouseout = function () {
                     oUl2.style.display = 'none'
                 }
-
             </script>
         <div class="clear"></div>
         </ul>
@@ -85,8 +84,8 @@
 
     <div id="show">
         <ul >
-            <li><a href="#"><img src="pics/show1.png" alt=""></a></li>
             <li><a href="#"><img src="pics/show2.png" alt=""></a></li>
+            <li><a href="#"><img src="pics/show1.png" alt=""></a></li>
             <div class="clear"></div>
         </ul>
         <div class="control">
@@ -100,29 +99,25 @@
             var aSpan = oShow.getElementsByTagName('span');
 
             var posL = 0;
-            var timer = null
 
-            window.onload = function () {
-
-                timer = setInterval(function () {
-                    if( posL == 0 ){
-                        oUl3.style.left = -960+'px'
-                        posL = -960;
-                    }else {
-                        oUl3.style.left = '0'
-                        posL = 0;
-                    }
-
-                },3000)
-
-                aSpan[0].onclick = function () {
-                    oUl3.style.left = 0
-                }
-                aSpan[1].onclick = function () {
+            timer = setInterval(function () {
+                if( posL == 0 ){
                     oUl3.style.left = -960+'px'
+                        posL = -960;
+                }else {
+                    oUl3.style.left = '0'
+                    posL = 0;
                 }
+            },2000)
 
+            aSpan[0].onclick = function () {
+                oUl3.style.left = 0
             }
+            aSpan[1].onclick = function () {
+                oUl3.style.left = -960+'px'
+            }
+
+
 
 
         </script>
